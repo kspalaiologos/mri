@@ -29,5 +29,5 @@ done
 
 echo "OK. Compressing..."
 
-cd $1-tmp && tar -c . | bzip3 -c -f -e -b 511 > "../$1.tar.bz3" && cd ..
+cd $1-tmp && tar -c . | bzip3 -c -f -e -b 511 > "../$1.mri.bz3" && cd ..
 rm -rf "$1-tmp"

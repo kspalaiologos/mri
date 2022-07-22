@@ -2,13 +2,13 @@
 minecraft region interchange - compressing minecraft savefiles with bzip3.
 
 # usage
-in the directory with server jars, to compress `world/` to `world.tar.bz3`:
+in the directory with server jars, to compress `world/` to `world.mri.bz3`:
 
 ```bash
 ~/minecraft$ ./mri-compress world >/dev/null
 ```
 
-decompressing `world.tar.bz3` to the `world/` directory (assuming it does not exist yet):
+decompressing `world.mri.bz3` to the `world/` directory (assuming it does not exist yet):
 ```bash
 ~/minecraft$ ./mri-decompress world >/dev/null
 ```
