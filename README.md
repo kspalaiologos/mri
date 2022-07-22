@@ -15,7 +15,7 @@ decompressing `world.mri.bz3` to the `world/` directory (assuming it does not ex
 
 # algorithm
 
-mri will decompress all gzip-compressed files in the world directory (as reported by `file`) and decompress all zlib hunks inside `.mca` files using `regiond`. then, all the files will be tarballed and compressed with bzip3 using the largest available block size.
+mri will decompress all gzip-compressed files in the world directory (as reported by `file`) and decompress all zlib hunks inside `.mca` files using `regiond`. then, all the files will be tarballed and compressed with bzip3 using the largest available block size. the tool can be easily altered to use lzma/zstd instead.
 
 # benchmarks
 
@@ -41,4 +41,5 @@ bzip3 is the best compressor in this benchmark, however, the unpacking pass that
  151343785 imperial.mri.lz4
   96153716 imperial.mri.lzma
   97547776 imperial.mri.ppmd
+  99869709 imperial.mri.zst
 ```
