@@ -17,6 +17,8 @@ decompressing `world.mri.bz3` to the `world/` directory (assuming it does not ex
 
 mri will decompress all gzip-compressed files in the world directory (as reported by `file`) and decompress all zlib hunks inside `.mca` files using `regiond`. then, all the files will be tarballed and compressed with bzip3 using the largest available block size. the tool can be easily altered to use lzma/zstd instead.
 
+the tool does not depend on minecraft version used to produce the savefile (however it is tailored to the "anvil" format). 
+
 # benchmarks
 
 the question whether bzip3 is the approperiate compressor for minecraft save files might be lingering already. having downloaded a few maps off planetminecraft, in particular focusing on [imperial city](https://www.planetminecraft.com/project/monumental-imperial-city/), i arrive at the following benchmarks (**no** mri, best compression):
