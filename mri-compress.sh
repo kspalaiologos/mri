@@ -11,8 +11,8 @@ truncate -s0 "$1-tmp/mri-data.txt"
 for f in $(find "$1-tmp"); do
     echo "Processing $f"
     
-    # Handle .mca files:
-    if [[ "$f" == *.mca ]]; then
+    # Handle .mca and .mcr files:
+    if [[ "$f" == *.mca || "$f" == *.mcr ]]; then
         # strip 1st path element in f
         echo "${f#*/}.mri" >> "$1-tmp/mri-regions.txt"
         ./regiond c "$f" "$f.mri"
